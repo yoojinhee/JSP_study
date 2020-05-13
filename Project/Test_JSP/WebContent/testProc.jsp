@@ -14,6 +14,7 @@
 	String inotice=request.getParameter("inotice");
 	String cnotice=request.getParameter("cnotice");
 	String dnotice=request.getParameter("dnotice");
+	
 	String job=request.getParameter("job");
 %>
 <!DOCTYPE html>
@@ -27,9 +28,20 @@
 아이디 : <%=id %><br>
 비밀번호 : <%=password %><br>
 성별 : <%=gen %><br>
-공지 메일 : <%=inotice %><br>
-광고 메일 : <%=cnotice %><br>
-배송 확인 메일 : <%=dnotice %><br>
+공지 메일 : <%=notice(inotice) %><br>
+광고 메일 : <%=notice(cnotice) %><br>
+배송 확인 메일 : <%=notice(dnotice) %><br>
 직업 : <%=job %><br>
+
+<!-- 함수 -->
+<%!
+	public String notice(String notice){
+		if(notice==null){
+			return "받지않음";
+		}else{
+			return "받음";
+		}
+	}
+%>
 </body>
 </html>

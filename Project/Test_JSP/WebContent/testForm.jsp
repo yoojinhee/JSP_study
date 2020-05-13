@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2>개인정보 입력</h2>
-<form action="testProc.jsp" method="post">
+<form action="testProc.jsp"  method="post">
 이름 : <input type="text" name="name" value="" size="11"><br>
 ID : <input type="text" name="id" value="" size="11"><br>
 PW : <input type="password" name="password" value="" size="11"><br>
